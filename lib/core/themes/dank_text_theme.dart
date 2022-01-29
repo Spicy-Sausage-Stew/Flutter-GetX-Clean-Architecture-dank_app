@@ -6,13 +6,13 @@ class DankTextTheme {
   DankTextTheme._();
 
   static const TextStyle headline1 = TextStyle(
-    fontSize: 22.0,
+    fontSize: 24.0,
     fontWeight: FontWeight.w700,
     color: DankColors.dankBlack,
     fontFamily: 'NotoSans',
   );
   static const TextStyle headline2 = TextStyle(
-    fontSize: 22.0,
+    fontSize: 24.0,
     fontWeight: FontWeight.w400,
     color: DankColors.dankBlack,
     fontFamily: 'NotoSans',
