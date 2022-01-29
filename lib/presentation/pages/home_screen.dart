@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:get/route_manager.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 import '../../config/dank_url.dart';
 import '../../core/themes/dank_colors.dart';
 import '../../core/themes/dank_text_theme.dart';
+import 'quiz_screen.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -52,7 +54,7 @@ class HomeScreen extends StatelessWidget {
                     DankColors.dankRed,
                   ),
                 ),
-                onPressed: () {},
+                onPressed: () => Get.to(const QuizScreen()),
                 child: Text(
                   '지금 문제 풀기',
                   style: DankTextTheme.bodyText2.copyWith(
