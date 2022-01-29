@@ -16,6 +16,7 @@ dependencies:
   get: ^4.6.1
   device_preview: ^1.0.0
   url_launcher: ^6.0.18
+  percent_indicator: ^4.0.0
 
 dev_dependencies:
   flutter_test:
