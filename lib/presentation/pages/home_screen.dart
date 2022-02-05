@@ -1,3 +1,4 @@
+import 'package:dank_app/presentation/widgets/dank_elevated_button.dart';
 import 'package:flutter/material.dart';
 import 'package:get/route_manager.dart';
 import 'package:url_launcher/url_launcher.dart';
@@ -39,6 +40,7 @@ class HomeScreen extends StatelessWidget {
                   ),
                 ),
               ),
+              const SizedBox(height: 8),
               TextButton(
                 onPressed: () => launch(DankUrl.openKakao),
                 child: Text(
@@ -48,12 +50,8 @@ class HomeScreen extends StatelessWidget {
                   ),
                 ),
               ),
-              ElevatedButton(
-                style: ButtonStyle(
-                  backgroundColor: MaterialStateProperty.all<Color>(
-                    DankColors.dankRed,
-                  ),
-                ),
+              const SizedBox(height: 8),
+              DankElevatedButton(
                 onPressed: () => Get.toNamed(DankRoutes.quiz),
                 child: Text(
                   '지금 문제 풀기',
@@ -61,6 +59,7 @@ class HomeScreen extends StatelessWidget {
                     color: DankColors.dankWhite,
                   ),
                 ),
+                color: DankColors.dankRed,
               ),
             ],
           ),
