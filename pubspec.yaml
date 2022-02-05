@@ -17,12 +17,20 @@ dependencies:
   device_preview: ^1.0.0
   url_launcher: ^6.0.18
   percent_indicator: ^4.0.0
+  retrofit: ^3.0.1
+  dio: ^4.0.4
+  freezed_annotation: ^1.1.0
+  intl: ^0.17.0
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
 
   flutter_lints: ^1.0.0
+  build_runner:
+  retrofit_generator: ^4.0.1
+  freezed: ^1.1.1
+  json_serializable:
 
 flutter:
 

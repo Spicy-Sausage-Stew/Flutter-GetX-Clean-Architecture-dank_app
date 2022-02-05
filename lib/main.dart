@@ -3,7 +3,7 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:get/route_manager.dart';
 
-import 'presentation/pages/home_screen.dart';
+import 'core/dank_routes.dart';
 
 void main() {
   runApp(DevicePreview(
@@ -22,7 +22,8 @@ class DankApp extends StatelessWidget {
       useInheritedMediaQuery: true,
       locale: DevicePreview.locale(context),
       builder: DevicePreview.appBuilder,
-      home: const HomeScreen(),
+      initialRoute: DankRoutes.home,
+      getPages: DankPages.pages,
     );
   }
 }
