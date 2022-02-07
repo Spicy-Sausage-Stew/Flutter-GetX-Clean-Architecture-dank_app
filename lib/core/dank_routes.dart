@@ -1,10 +1,11 @@
-import 'package:dank_app/presentation/bindings/home_binding.dart';
-import 'package:dank_app/presentation/pages/result_screen.dart';
 import 'package:get/route_manager.dart';
 
+import '../presentation/bindings/home_binding.dart';
 import '../presentation/bindings/quiz_binding.dart';
+import '../presentation/bindings/result_binding.dart';
 import '../presentation/pages/home_screen.dart';
 import '../presentation/pages/quiz_screen.dart';
+import '../presentation/pages/result_screen.dart';
 
 class DankRoutes {
   DankRoutes._();
@@ -31,6 +32,7 @@ class DankPages {
     GetPage(
       name: DankRoutes.result,
       page: () => const ResultScreen(),
+      binding: ResultBinding(),
     ),
   ];
 }
