@@ -2,10 +2,14 @@ import 'package:device_preview/device_preview.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:get/route_manager.dart';
+import 'package:google_mobile_ads/google_mobile_ads.dart';
 
 import 'core/dank_routes.dart';
 
 void main() {
+  WidgetsFlutterBinding.ensureInitialized();
+  MobileAds.instance.initialize();
+
   runApp(DevicePreview(
     enabled: !kReleaseMode,
     builder: (context) => const DankApp(),
