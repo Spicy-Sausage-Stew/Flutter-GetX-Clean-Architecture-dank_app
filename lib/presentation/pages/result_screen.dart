@@ -4,9 +4,10 @@ import 'package:get/get.dart';
 import '../../core/dank_routes.dart';
 import '../../core/themes/dank_colors.dart';
 import '../../core/themes/dank_text_theme.dart';
+import '../controllers/ad_controller.dart';
 import '../widgets/dank_elevated_button.dart';
 
-class ResultScreen extends StatelessWidget {
+class ResultScreen extends GetWidget<AdController> {
   const ResultScreen({Key? key}) : super(key: key);
 
   @override
@@ -58,7 +59,14 @@ class ResultScreen extends StatelessWidget {
               ),
               const Spacer(),
               DankElevatedButton(
-                onPressed: () {},
+                onPressed: () {
+                  if (controller.interstitialAd == null) {
+                    controller.loadAd();
+                    controller.interstitialAd?.show();
+                  } else {
+                    controller.interstitialAd!.show();
+                  }
+                },
                 child: Text(
                   '개발자 도와주러 가기',
                   style: DankTextTheme.bodyText2.copyWith(
