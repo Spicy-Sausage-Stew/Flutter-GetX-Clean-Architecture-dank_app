@@ -11,7 +11,7 @@ A clean architecture app, made with Getx, Flutter.
 - Flutter
 - GetX
 - Clean architecture
-
+- Codemagic(CI/CD)
 
 #### [back end]
 - Node.js
